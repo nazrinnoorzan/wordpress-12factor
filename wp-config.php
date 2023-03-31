@@ -34,6 +34,23 @@ define('FORCE_SSL_ADMIN', true);
 define('FORCE_SSL_LOGIN', true);
 if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') $_SERVER['HTTPS'] = 'on';
 
+if (!empty(getenv('REDIS_URL'))) {
+	$env = parse_url(getenv('REDIS_URL'));
+	
+	define('WP_CACHE', true);
+	define('WP_REDIS_DISABLED', false);
+	define('WP_REDIS_CLIENT', 'predis');
+	define('WP_REDIS_SCHEME', $env['scheme']);
+	define('WP_REDIS_HOST', $env['host']);
+	define('WP_REDIS_PORT', $env['port']);
+	define('WP_REDIS_PASSWORD', $env['pass']);
+
+	// 28 Days
+	define('WP_REDIS_MAXTTL', 2419200);
+
+	unset($env);
+}
+
 define('WP_DEBUG', true);
 define('WP_DEBUG_DISPLAY', false);
 define('WP_DEBUG_LOG', false); // this is correct - we don't want errors to go to debug.log, but to the default destination

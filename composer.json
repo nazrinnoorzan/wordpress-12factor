@@ -29,7 +29,8 @@
 		"wp-cli/wp-cli": "^2.6.0",
 		"wpackagist-theme/twentyfifteen": "*",
 		"dzuelke/twentyfifteen-child": "*",
-		"wpackagist-plugin/redis-cache": "^2.2.4"
+		"wpackagist-plugin/redis-cache": "^2.2.4",
+		"predis/predis": "^2.1"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
