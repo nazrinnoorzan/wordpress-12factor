@@ -6,10 +6,6 @@
 		},
 		{
 			"type": "path",
-			"url": "plugins/*/"
-		},
-		{
-			"type": "path",
 			"url": "themes/*/"
 		}
 	],
