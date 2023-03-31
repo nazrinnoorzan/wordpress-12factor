@@ -6,6 +6,10 @@
 		},
 		{
 			"type": "path",
+			"url": "plugins/*/"
+		},
+		{
+			"type": "path",
 			"url": "themes/*/"
 		}
 	],
@@ -19,11 +23,12 @@
 	},
 	"require": {
 		"ext-gd": "*",
-		"wpackagist-plugin/amazon-web-services": "*",
-		"wpackagist-plugin/amazon-s3-and-cloudfront": "*",
-		"wp-cli/wp-cli": "^2.6.0",
+		"johnpbloch/wordpress": "^4.5",
+		"wpackagist-plugin/amazon-web-services": "^0.3.4",
+		"wpackagist-plugin/amazon-s3-and-cloudfront": "^0.9.11",
+		"wp-cli/wp-cli": "^1.1.0",
 		"wpackagist-theme/twentyfifteen": "*",
-		"wp-cli/search-replace-command": "^2.0"
+		"dzuelke/twentyfifteen-child": "*"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
@@ -48,6 +53,12 @@
 		]
 	},
 	"require-dev": {
-		"heroku/heroku-buildpack-php": "20"
+		"heroku/heroku-buildpack-php": "*"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"johnpbloch/wordpress-core-installer": true
+		}
 	}
 }
