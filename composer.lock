@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91068c98c06736b272c632f72bbfaa0a",
+    "content-hash": "53e7ba96688e06b0c664b7e59ce21782",
     "packages": [
         {
             "name": "composer/installers",
@@ -740,19 +740,21 @@
     "packages-dev": [
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v231",
+            "version": "v20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "5c628e7e989e9d96d742bea67f3245bebe5fc7be"
+                "reference": "b97d8ea26bd0242ca53c94c1a23ba6c874303316"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/5c628e7e989e9d96d742bea67f3245bebe5fc7be",
-                "reference": "5c628e7e989e9d96d742bea67f3245bebe5fc7be",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/b97d8ea26bd0242ca53c94c1a23ba6c874303316",
+                "reference": "b97d8ea26bd0242ca53c94c1a23ba6c874303316",
                 "shasum": ""
             },
             "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
                 "bin/heroku-php-apache2",
                 "bin/heroku-php-nginx"
             ],
@@ -767,17 +769,18 @@
                     "email": "dz@heroku.com"
                 }
             ],
-            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP and Apache2/Nginx as on Heroku",
-            "homepage": "https://github.com/heroku/heroku-buildpack-php",
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "http://github.com/heroku/heroku-buildpack-php",
             "keywords": [
                 "apache",
                 "apache2",
                 "foreman",
                 "heroku",
+                "hhvm",
                 "nginx",
                 "php"
             ],
-            "time": "2023-02-14T21:03:27+00:00"
+            "time": "2014-06-17T20:58:52+00:00"
         }
     ],
     "aliases": [],
