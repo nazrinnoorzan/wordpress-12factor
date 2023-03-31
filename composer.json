@@ -28,7 +28,8 @@
 		"wpackagist-plugin/amazon-s3-and-cloudfront": "*",
 		"wp-cli/wp-cli": "^2.6.0",
 		"wpackagist-theme/twentyfifteen": "*",
-		"dzuelke/twentyfifteen-child": "*"
+		"dzuelke/twentyfifteen-child": "*",
+		"wpackagist-plugin/redis-cache": "^2.2.4"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
